@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$cyan: hsl(179, 62%, 43%);
+$cyan2: hsla(179, 62%, 43%, 0.752);
+$yellow: hsl(71, 73%, 54%);
+$gray: hsl(204, 43%, 93%);
+$blue: hsl(218, 22%, 67%);
+$w: white;
+$mb: 1rem;
+
+body{
+    font-family: 'Karla', sans-serif;
+    height: 100vh;
+    font-size: 1rem;
+}
+
+main{
+    min-height: 100%;
+    width: 100%;
+    background-color: $gray;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    max-width: 85%;
+    margin: 1rem;
+}
+
+//  CARDS
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    box-shadow: 0rem 0rem 6.25rem -2.8125rem rgba(0, 0, 0, 0.2);
+}
+.card{
+    padding: 1.5rem;
+}
+.card-1 {
+    background-color: $w;
+    border-radius: 0.4rem 0.4rem 0 0;
+    h2{
+        color: $cyan;
+        margin-bottom: $mb;
+    }
+    .fp{
+        color: $yellow;
+        margin-bottom: $mb;
+        font-weight: 600;
+    }
+    p{
+        color: $blue;
+        line-height: 1.5rem;
+    }
+}
+.card-2 {
+    background-color: $cyan;
+    h3{
+        color: $w;
+        margin-bottom: $mb;
+    }
+    .price {
+        color: $w;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    section{
+        display: flex;
+        align-items: center;
+        gap: $mb;
+        margin-bottom: $mb;
+    }
+    section p{
+        color: $gray;
+    }
+    >p{
+        color: $w;
+        margin-bottom: $mb;
+    }
+    button{
+        color: $w;
+        font-weight: 600;
+        font-size: 1rem;
+        font-family: 'Karla', sans-serif;
+        background-color: $yellow;
+        border: none;
+        border-radius: 0.4rem;
+        width: 100%;
+        padding: 1rem;
+        box-shadow: 0rem 0.3125rem 1.25rem 0rem rgba(66, 68, 90, 0.2);
+    }
+}
+
+.card-3 {
+    background-color: $cyan2;
+    border-radius: 0 0 0.4rem 0.4rem;
+    h3{
+        color: $w;
+        margin-bottom: $mb;
+    }
+    p{
+        color: $gray;
+    }
+}
+
+// PC version
+
+@media (min-width: 67.5rem) {
+    .container{
+        max-width: 40%;
+    }
+    .card{
+        padding: 2rem;
+    }
+    .cards {     
+        grid-template-rows: 43% 57%;
+        box-shadow: 0rem 0rem 6.25rem -2.8125rem rgba(0, 0, 0, 0.2);
+    }
+    .second-row{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .card-1{
+        height: 100%;
+        .fp{
+            margin-bottom: 0.5rem;
+            width: 80%;
+        }
+    }
+    .card-2{
+        border-radius: 0 0 0rem 0.4rem;
+        button{
+            width: 80%;
+        }
+    }
+    .card-3{
+        border-radius: 0 0 0.4rem 0rem;
+    }
+}

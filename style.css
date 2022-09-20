@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  height: 100vh;
+  font-size: 1rem;
+}
+
+main {
+  min-height: 100%;
+  width: 100%;
+  background-color: hsl(204deg, 43%, 93%);
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  max-width: 85%;
+  margin: 1rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  box-shadow: 0rem 0rem 6.25rem -2.8125rem rgba(0, 0, 0, 0.2);
+}
+
+.card {
+  padding: 1.5rem;
+}
+
+.card-1 {
+  background-color: white;
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+.card-1 h2 {
+  color: hsl(179deg, 62%, 43%);
+  margin-bottom: 1rem;
+}
+.card-1 .fp {
+  color: hsl(71deg, 73%, 54%);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.card-1 p {
+  color: hsl(218deg, 22%, 67%);
+  line-height: 1.5rem;
+}
+
+.card-2 {
+  background-color: hsl(179deg, 62%, 43%);
+}
+.card-2 h3 {
+  color: white;
+  margin-bottom: 1rem;
+}
+.card-2 .price {
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.card-2 section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.card-2 section p {
+  color: hsl(204deg, 43%, 93%);
+}
+.card-2 > p {
+  color: white;
+  margin-bottom: 1rem;
+}
+.card-2 button {
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: "Karla", sans-serif;
+  background-color: hsl(71deg, 73%, 54%);
+  border: none;
+  border-radius: 0.4rem;
+  width: 100%;
+  padding: 1rem;
+  box-shadow: 0rem 0.3125rem 1.25rem 0rem rgba(66, 68, 90, 0.2);
+}
+
+.card-3 {
+  background-color: hsla(179deg, 62%, 43%, 0.752);
+  border-radius: 0 0 0.4rem 0.4rem;
+}
+.card-3 h3 {
+  color: white;
+  margin-bottom: 1rem;
+}
+.card-3 p {
+  color: hsl(204deg, 43%, 93%);
+}
+
+@media (min-width: 67.5rem) {
+  .container {
+    max-width: 40%;
+  }
+  .card {
+    padding: 2rem;
+  }
+  .cards {
+    grid-template-rows: 43% 57%;
+    box-shadow: 0rem 0rem 6.25rem -2.8125rem rgba(0, 0, 0, 0.2);
+  }
+  .second-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .card-1 {
+    height: 100%;
+  }
+  .card-1 .fp {
+    margin-bottom: 0.5rem;
+    width: 80%;
+  }
+  .card-2 {
+    border-radius: 0 0 0rem 0.4rem;
+  }
+  .card-2 button {
+    width: 80%;
+  }
+  .card-3 {
+    border-radius: 0 0 0.4rem 0rem;
+  }
+}/*# sourceMappingURL=style.css.map */
